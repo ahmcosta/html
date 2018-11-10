@@ -8,10 +8,8 @@ import (
 	"time"
 )
 
-/*
-	This function expects a URLs array. For each URL, it gets the page, cuts its body, search its title using regex
-*/
-func titulo(urls ...string) <-chan string { // <-chan - canal somente-leitura
+// Title expects a URLs array. For each URL, it gets the page, cuts its body, search its title using regex
+func Title(urls ...string) <-chan string { // <-chan - canal somente-leitura
 	c := make(chan string)
 	for _, url := range urls {
 		go func(url string) { // anonymous function
