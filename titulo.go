@@ -1,3 +1,5 @@
+package html
+
 import (
 	"fmt"
 	"io/ioutil"
